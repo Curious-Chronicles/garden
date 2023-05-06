@@ -7,7 +7,7 @@ status: Todo
 created: [[2023-05-06]]
 ---
 ## 1. Number systems
-	
+	Topics
 ## 2. Percentages
 ## 3. Profit and Loss
 ## 4. Simple and Compound Interest
