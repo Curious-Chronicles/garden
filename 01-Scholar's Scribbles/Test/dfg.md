@@ -4,7 +4,8 @@ tags: {{tags}}
 related: {{related}}
 status: {{status}}
 created: {{created_date}}
-updated: <%+ tp.file.last_modified_date() %>
+updated: NaN
 author: {{author}}
 url: {{resourc url}}
 ---
+dfgdg
