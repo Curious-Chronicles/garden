@@ -23,6 +23,8 @@ Computer Software: It refers to the program, application, and instruction that t
 2. **Application**: They are software programs that make use of the resources of physical component to perform a set of command or tasks. 
 
 ## 2. Basic computer organization and architecture
+
+
 ## 3. Computer networks and communication technologies
 ## 4. Operating systems and their functionalities
 ## 5. Fundamentals of programming and algorithms
