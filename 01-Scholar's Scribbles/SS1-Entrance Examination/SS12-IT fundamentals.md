@@ -1,5 +1,5 @@
 ---
-index: SE12
+index: SS12
 marks: 30
 tags: entrance, it-fundatmentals
 related: [[]]

@@ -1,5 +1,5 @@
 ---
-index: SE17
+index: SS17
 marks: 5
 tags: entrance, data-structure, DBMS
 related: [[]]

@@ -1,5 +1,5 @@
 ---
-index: SE11
+index: SS11
 marks: 30
 tags: entrance, aptitude
 related: [[]]

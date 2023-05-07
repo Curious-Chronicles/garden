@@ -1,5 +1,5 @@
 ---
-index: SE14
+index: SS14
 marks: 5
 tags: entrance, operating-system
 related: [[]]

@@ -1,5 +1,5 @@
 ---
-index: SE19
+index: SS19
 marks: 30
 tags: entrance, digital-logics
 related: [[]]

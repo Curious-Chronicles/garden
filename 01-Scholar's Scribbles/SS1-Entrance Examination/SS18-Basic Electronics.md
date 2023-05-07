@@ -1,5 +1,5 @@
 ---
-index: SE18
+index: SS18
 marks: 5
 tags: entrance, basic-electronics
 related: [[]]

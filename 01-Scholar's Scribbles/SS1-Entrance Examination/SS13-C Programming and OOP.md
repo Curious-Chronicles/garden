@@ -1,5 +1,5 @@
 ---
-index: SE13
+index: SS13
 marks: 10
 tags: entrance, c-programming, oop
 related: [[]]
