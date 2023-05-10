@@ -1,3 +1,4 @@
 - [The Rolling Stones - Paint It, Black](https://www.youtube.com/watch?v=O4irXQhgMqg)
 - [Johnny Cash - Hurt](https://www.youtube.com/watch?v=8AHCfZTRGiI)
+- [Somewhere over the Rainbow - Israel "IZ" Kamakawiwoʻole](https://www.youtube.com/watch?v=V1bFr2SWP1I)
 - 
