@@ -1,4 +1,12 @@
 - [The Rolling Stones - Paint It, Black](https://www.youtube.com/watch?v=O4irXQhgMqg)
 - [Johnny Cash - Hurt](https://www.youtube.com/watch?v=8AHCfZTRGiI)
 - [Somewhere over the Rainbow - Israel "IZ" Kamakawiwoʻole](https://www.youtube.com/watch?v=V1bFr2SWP1I)
+- [Bobby McFerrin - Don't Worry Be Happy](https://www.youtube.com/watch?v=d-diB65scQU)
+- [Louis Armstrong - What A Wonderful World](https://www.youtube.com/watch?v=2nGKqH26xlg)
+- [Akon - Lonely](https://www.youtube.com/watch?v=6EEW-9NDM5k)
+- [Ben E. King — Stand By Me](https://www.youtube.com/watch?v=einn_UJgGGM)
+- [The Beatles - Hey Jude](https://www.youtube.com/watch?v=A_MjCqQoLLA)
+- [The sound of Silence -The Ghost of Johnny Cash](https://www.youtube.com/watch?v=gAX7AKaUCgU)
+- [Eagles - Hotel California](https://www.youtube.com/watch?v=09839DpTctU)
+- [Metallica: One](https://www.youtube.com/watch?v=WM8bTdBs-cw)
 - 
