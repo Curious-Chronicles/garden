@@ -1,0 +1,3 @@
+- [The Rolling Stones - Paint It, Black](https://www.youtube.com/watch?v=O4irXQhgMqg)
+- [Johnny Cash - Hurt](https://www.youtube.com/watch?v=8AHCfZTRGiI)
+- 
