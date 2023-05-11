@@ -71,11 +71,17 @@ GROUP BY start_month;
 
 What plan start_date values occur after the year 2020 for our dataset? Show the breakdown by count of events for each plan_name
 ```sql
-
+SELECT p.plan_name, COUNT(*) AS count
+FROM foodie_fi.subscriptions AS s
+INNER JOIN foodie_fi.plans AS p ON s.plan_id = p.plan_id
+WHERE s.start_date > '2020-12-31'
+GROUP BY p.plan_name;
 ```
 
 What is the customer count and percentage of customers who have churned rounded to 1 decimal place?
+```sql
 
+```
 How many customers have churned straight after their initial free trial - what percentage is this rounded to the nearest whole number?
 
 What is the number and percentage of customer plans after their initial free trial?
