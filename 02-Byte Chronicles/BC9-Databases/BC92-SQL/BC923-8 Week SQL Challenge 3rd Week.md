@@ -125,6 +125,7 @@ INNER JOIN (
 ```
 
 What is the customer count and percentage breakdown of all 5 plan_name values at 2020-12-31?
+- Only churn with 1 customer was present at the specify date.
 ```sql
 SELECT p.plan_name, COUNT(*) AS count
 FROM foodie_fi.subscriptions AS s
@@ -134,12 +135,18 @@ GROUP BY p.plan_name;
 ```
 
 How many customers have upgraded to an annual plan in 2020?
+- the total customer were 195 in the year 2020
 ```sql
-
+SELECT p.plan_name, COUNT(*) AS count
+FROM foodie_fi.subscriptions AS s
+INNER JOIN foodie_fi.plans AS p ON s.plan_id = p.plan_id
+WHERE EXTRACT(YEAR FROM s.start_date) = 2020 and p.plan_name='pro annual'
+GROUP BY p.plan_name;
 ```
 
 How many days on average does it take for a customer to an annual plan from the day they join Foodie-Fi?
 ```sql
+
 ```
 
 Can you further breakdown this average value into 30 day periods (i.e. 0-30 days, 31-60 days etc)
