@@ -80,7 +80,11 @@ GROUP BY p.plan_name;
 
 What is the customer count and percentage of customers who have churned rounded to 1 decimal place?
 ```sql
-
+SELECT 
+  COUNT(DISTINCT s.customer_id) AS customer_count,
+  ROUND(COUNT(DISTINCT CASE WHEN p.plan_name <> 'churn' THEN s.customer_id END) * 100.0 / COUNT(DISTINCT s.customer_id), 1) AS churn_percentage
+FROM foodie_fi.subscriptions AS s
+INNER JOIN foodie_fi.plans AS p ON s.plan_id = p.plan_id;
 ```
 How many customers have churned straight after their initial free trial - what percentage is this rounded to the nearest whole number?
 
