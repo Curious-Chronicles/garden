@@ -145,9 +145,10 @@ GROUP BY p.plan_name;
 ```
 
 How many days on average does it take for a customer to an annual plan from the day they join Foodie-Fi?
+- In average it took customer 101 days before they went to pro annual
 ```sql
 SELECT
-  AVG(a.switch_date - s.start_date) AS average_days_to_annual_plan
+  ROUND(AVG(a.switch_date - s.start_date),1) AS average_days_to_annual_plan
 FROM foodie_fi.subscriptions AS s
 INNER JOIN (
   SELECT customer_id, MIN(start_date) AS switch_date
@@ -160,10 +161,34 @@ WHERE s.plan_id <> '3';
 
 Can you further breakdown this average value into 30 day periods (i.e. 0-30 days, 31-60 days etc)
 ```sql
+SELECT
+  CASE
+    WHEN days <= 30 THEN '0-30 days'
+    WHEN days <= 60 THEN '31-60 days'
+    WHEN days <= 90 THEN '61-90 days'
+    ELSE 'More than 90 days'
+  END AS period,
+  COUNT(*) AS count
+FROM (
+  SELECT
+    s.customer_id,
+    ROUND(a.switch_date - s.start_date,1) AS  days
+  FROM foodie_fi.subscriptions AS s
+  INNER JOIN (
+    SELECT customer_id, MIN(start_date) AS switch_date
+    FROM foodie_fi.subscriptions
+    WHERE plan_id = 3
+    GROUP BY customer_id
+  ) AS a ON s.customer_id = a.customer_id
+  WHERE s.plan_id <> 3
+) AS subquery
+GROUP BY period
+ORDER BY MIN(days);
 ```
 
 How many customers downgraded from a pro monthly to a basic monthly plan in 2020?
 ```sql
+
 ```
 
 # **C. Challenge Payment Question**
