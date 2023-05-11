@@ -70,6 +70,7 @@ GROUP BY start_month;
 ```
 
 What plan start_date values occur after the year 2020 for our dataset? Show the breakdown by count of events for each plan_name
+- According to data, pro annual has 63. churn is 71, pro monthly is 60 and basic monthly is 8. 
 ```sql
 SELECT p.plan_name, COUNT(*) AS count
 FROM foodie_fi.subscriptions AS s
@@ -79,14 +80,19 @@ GROUP BY p.plan_name;
 ```
 
 What is the customer count and percentage of customers who have churned rounded to 1 decimal place?
+-  According to the data. 30.7% of the user have churned. 
 ```sql
 SELECT 
   COUNT(DISTINCT s.customer_id) AS customer_count,
-  ROUND(COUNT(DISTINCT CASE WHEN p.plan_name <> 'churn' THEN s.customer_id END) * 100.0 / COUNT(DISTINCT s.customer_id), 1) AS churn_percentage
+  ROUND(COUNT(DISTINCT CASE WHEN p.price IS NULL THEN s.customer_id END) * 100.0 / COUNT(DISTINCT s.customer_id), 1) AS churn_percentage
 FROM foodie_fi.subscriptions AS s
 INNER JOIN foodie_fi.plans AS p ON s.plan_id = p.plan_id;
 ```
+
 How many customers have churned straight after their initial free trial - what percentage is this rounded to the nearest whole number?
+```sql
+
+```
 
 What is the number and percentage of customer plans after their initial free trial?
 
