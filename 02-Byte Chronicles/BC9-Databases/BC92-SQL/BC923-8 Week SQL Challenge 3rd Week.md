@@ -110,16 +110,32 @@ WHERE t.end_date = s.start_date;
 ```
 
 What is the number and percentage of customer plans after their initial free trial?
+- 908 customer continue on with the plan with 90.8 percentage of trial count.
 ```sql
-
+SELECT
+  COUNT(DISTINCT s.customer_id) AS customer_count,
+  COUNT(DISTINCT CASE WHEN s.plan_id <> '0' and s.plan_id <> '4' THEN s.customer_id END) AS plan_count,
+  ROUND(COUNT(DISTINCT CASE WHEN s.plan_id <> '0' and s.plan_id <> '4' THEN s.customer_id END) * 100.0 / COUNT(DISTINCT s.customer_id), 1) AS plan_percentage
+FROM foodie_fi.subscriptions AS s
+INNER JOIN (
+  SELECT customer_id
+  FROM foodie_fi.subscriptions
+  WHERE plan_id = '0'
+) AS t ON s.customer_id = t.customer_id;
 ```
 
 What is the customer count and percentage breakdown of all 5 plan_name values at 2020-12-31?
 ```sql
+SELECT p.plan_name, COUNT(*) AS count
+FROM foodie_fi.subscriptions AS s
+INNER JOIN foodie_fi.plans AS p ON s.plan_id = p.plan_id
+WHERE s.start_date = '2020-12-31'
+GROUP BY p.plan_name;
 ```
 
 How many customers have upgraded to an annual plan in 2020?
 ```sql
+
 ```
 
 How many days on average does it take for a customer to an annual plan from the day they join Foodie-Fi?
