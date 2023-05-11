@@ -146,7 +146,16 @@ GROUP BY p.plan_name;
 
 How many days on average does it take for a customer to an annual plan from the day they join Foodie-Fi?
 ```sql
-
+SELECT
+  AVG(a.switch_date - s.start_date) AS average_days_to_annual_plan
+FROM foodie_fi.subscriptions AS s
+INNER JOIN (
+  SELECT customer_id, MIN(start_date) AS switch_date
+  FROM foodie_fi.subscriptions
+  WHERE plan_id = '3'
+  GROUP BY customer_id
+) AS a ON s.customer_id = a.customer_id
+WHERE s.plan_id <> '3';
 ```
 
 Can you further breakdown this average value into 30 day periods (i.e. 0-30 days, 31-60 days etc)
