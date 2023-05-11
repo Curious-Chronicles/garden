@@ -187,8 +187,21 @@ ORDER BY MIN(days);
 ```
 
 How many customers downgraded from a pro monthly to a basic monthly plan in 2020?
+- 163 customer downgraded from pro monthly to basic monthly in 2020
 ```sql
-
+SELECT COUNT(DISTINCT s.customer_id) AS downgrade_count
+FROM foodie_fi.subscriptions AS s
+INNER JOIN (
+  SELECT customer_id, start_date
+  FROM foodie_fi.subscriptions
+  WHERE plan_id = '2' AND EXTRACT(YEAR FROM start_date) = 2020
+) AS pro ON s.customer_id = pro.customer_id
+INNER JOIN (
+  SELECT customer_id, start_date
+  FROM foodie_fi.subscriptions
+  WHERE plan_id = '1' AND EXTRACT(YEAR FROM start_date) = 2020
+) AS basic ON s.customer_id = basic.customer_id
+WHERE plan_id = '1' AND  pro.start_date> s.start_date;
 ```
 
 # **C. Challenge Payment Question**
