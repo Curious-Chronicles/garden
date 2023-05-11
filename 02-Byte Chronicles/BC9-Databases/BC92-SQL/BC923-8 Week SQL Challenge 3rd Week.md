@@ -27,7 +27,7 @@ URL: [link](https://8weeksqlchallenge.com/case-study-3/)
 
 Based off the 8 sample customers provided in the sample from the subscriptions table, write a brief description about each customer’s onboarding journey. Try to keep it as short as possible - you may also want to run some sort of join to make your explanations a bit easier!
 
-Summarized version of the plan changes that occurred for the first 8 customes.  
+Summarized version of the plan changes that occurred for the first 8 customers.  
 
 |Customer| Journey Started | Journey Ended | Within Trial Period| Churn After Period| New Plan Period|
 | --- | --- | --- | --- | --- | --- |
@@ -41,7 +41,7 @@ Summarized version of the plan changes that occurred for the first 8 customes.
 |8| basic monthly | pro monthly (After 2 months) |  -  | - | - |
 
 
-Below SQL queries can provide more indepth information. 
+Below SQL queries can provide more in-depth information. 
 ```sql
 SELECT s.customer_id, s.plan_id, p.plan_name, p.price, s.start_date  
 FROM foodie_fi.plans as p
@@ -70,6 +70,9 @@ GROUP BY start_month;
 ```
 
 What plan start_date values occur after the year 2020 for our dataset? Show the breakdown by count of events for each plan_name
+```sql
+
+```
 
 What is the customer count and percentage of customers who have churned rounded to 1 decimal place?
 
