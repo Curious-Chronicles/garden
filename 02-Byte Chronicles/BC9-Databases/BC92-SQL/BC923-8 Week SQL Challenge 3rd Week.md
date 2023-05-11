@@ -90,22 +90,29 @@ INNER JOIN foodie_fi.plans AS p ON s.plan_id = p.plan_id;
 ```
 
 How many customers have churned straight after their initial free trial - what percentage is this rounded to the nearest whole number?
+- According to the data only 9.2% of user churn right after ending their trial period.
 ```sql
 SELECT
   COUNT(DISTINCT s.customer_id) AS churned_count,
   COUNT(DISTINCT t.customer_id) AS trial_count,
-  COUNT(DISTINCT s.customer_id) * 100.0 / COUNT(DISTINCT t.customer_id) AS churned_percentage
+  ROUND(COUNT(
+  	CASE
+    	WHEN s.plan_id = '4' then s.customer_id
+    END
+  ) * 100.0 / COUNT(DISTINCT t.customer_id),1) AS churned_percentage
 FROM foodie_fi.subscriptions AS s
 INNER JOIN (
   SELECT customer_id, start_date + INTERVAL '7' DAY AS end_date
   FROM foodie_fi.subscriptions
   WHERE plan_id = '0'
 ) AS t ON s.customer_id = t.customer_id
-WHERE t.end_date = s.start_date
-AND s.plan_id = '4';
+WHERE t.end_date = s.start_date;
 ```
 
 What is the number and percentage of customer plans after their initial free trial?
+```sql
+
+```
 
 What is the customer count and percentage breakdown of all 5 plan_name values at 2020-12-31?
 
