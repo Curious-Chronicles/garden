@@ -22,7 +22,7 @@ cooking-time: 15
 - [ ] 1 tbsp Kimchi Juice Water from squeezing out kimchi
 - [ ] 2 tbsp Vegetable oil Or neutral flavor oil
 
-## Garnish
+## 🥩Garnish
 
 - [ ] 2 Fried Egg Sunny-side up
 - [ ] Toasted sesame seeds
@@ -30,3 +30,15 @@ cooking-time: 15
 - [ ] Seaweed strips Crispy nori ( seaweed ) cut into thin strips
 
 # 💵Money
+
+# 🧑‍🍳Instruction
+
+- First, squeeze out the water from the kimchi and keep the kimchi juice for later use. 
+- Cut the kimchi into medium bite-size pieces and stir fry the onion for a few minutes. 
+- Follow with chicken and add kimchi and stir fry for a few seconds 
+- Add chili powder and gochujang and cook until all ingredients combine together. 
+- Add the rice and season with sesame oil, sugar, and salt. 
+- Mix everything well and continue stir fry for another 1-2 minutes. 
+- Sprinkle spring onions and toasted sesame seeds. Transfer to a serving plate. 
+- Garnish each plate with toasted sesame seeds, nori strips, and spring onions. 
+- Add a fried egg with runny yolk on top.
