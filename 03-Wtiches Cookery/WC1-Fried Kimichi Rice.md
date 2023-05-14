@@ -29,4 +29,4 @@ cooking-time: 15
 - [ ] Spring onion
 - [ ] Seaweed strips Crispy nori ( seaweed ) cut into thin strips
 
-# :
+# 💵Money
