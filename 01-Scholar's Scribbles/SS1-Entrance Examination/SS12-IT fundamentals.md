@@ -24,7 +24,35 @@ Computer Software: It refers to the program, application, and instruction that t
 
 ## 2. Basic computer organization and architecture
 
+**Computer Architecture**
 
+**Computer Organization**
+The way hardware components are arranged and interconnected. It focuses on the internal structure and design of a computer. 
+
+1. **Central Processing Unit (CPU):** The CPU is the main component of a computer that performs most of the processing. It executes instructions, performs calculations, and manages data.
+2. **Memory Hierarchy**: The memory hierarchy consists of different levels of memory, including registers, cache, main memory (RAM), and secondary storage (hard drives or solid-state drives). These levels vary in terms of capacity, speed, and cost, with registers being the fastest but smallest, and secondary storage being slower but offering more storage capacity.
+3. **Instruction Set Architecture (ISA**): The ISA defines the set of instructions that a CPU can execute. It includes the instructions, data types, addressing modes, and registers available to programmers.
+4. **Bus System**: Buses are the communication channels through which data and control signals travel between different components of a computer system. They include the address bus, data bus, and control bus.
+
+**Computer Architecture**:
+Computer architecture refers to the design and organization of a computer system, encompassing both hardware and software aspects. It involves how the hardware components work together to execute instructions and process data. Here are a couple of key terms related to computer architecture:
+1. **Von Neumann Architecture**: The Von Neumann architecture is a fundamental computer architecture design that separates memory and processing. It includes a CPU, memory, input/output devices, and a bus system. Instructions and data are stored in the same memory, and the CPU fetches and executes instructions sequentially.
+2. **Pipelining**: Pipelining is a technique used in CPUs to improve instruction execution efficiency. It divides the instruction execution process into stages, allowing multiple instructions to be processed simultaneously at different stages of the pipeline.
+3. **Caches**: Caches are small, fast memory units located closer to the CPU. They store frequently accessed data and instructions, reducing the time needed to access them from slower main memory.
+
+**Additional Sub-Topics:**
+
+**Parallel Processing:**
+Parallel processing involves using multiple processors or cores to perform computations simultaneously, thereby increasing overall processing speed and efficiency.
+
+**Instruction Level Parallelism (ILP):**
+ILP refers to techniques and technologies that allow instructions within a program to be executed in parallel, exploiting dependencies and overlapping execution to improve performance.
+
+**Memory Management:**
+Memory management involves allocating and managing memory resources in a computer system. It includes techniques such as virtual memory, which allows programs to use more memory than is physically available.
+
+**Input/Output Systems**:
+Input/output systems deal with how computers interact with peripheral devices, such as keyboards, mice, displays, and storage devices. It includes protocols, interfaces, and techniques for efficient data transfer between the computer and external devices.
 
 ## 3. Computer networks and communication technologies
 ## 4. Operating systems and their functionalities
