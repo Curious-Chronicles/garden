@@ -216,6 +216,18 @@ The Foodie-Fi team wants you to create a new payments table for the year 2020 th
 Example outputs for this table might look like the following:
 ![](https://i.imgur.com/Ny16ESX.png)
 
+```sql
+CREATE TABLE payment AS
+SELECT s.customer_id, s.plan_id, p.plan_name, TO_CHAR(s.start_date, 'YYYY-MM-DD') as payment_date, 
+	CASE
+    	WHEN p.price IS NULL then 0
+        ELSE p.price
+    END as amount
+FROM foodie_fi.plans as p
+INNER JOIN foodie_fi.subscriptions as s ON p.plan_id = s.plan_id 
+WHERE EXTRACT(YEAR FROM s.start_date) = 2020 
+ORDER BY s.customer_id, p.plan_id;
+```
 
 # **D. Outside The Box Questions**
 
