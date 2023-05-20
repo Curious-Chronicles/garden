@@ -229,6 +229,18 @@ WHERE EXTRACT(YEAR FROM s.start_date) = 2020
 ORDER BY s.customer_id, p.plan_id;
 ```
 
+```ad-note
+
+1. Look at the plans except the trial period. 
+2. Start the payment date monthly until next plan date is hit. or go upto 12 months. 
+3. If it is annual plan, you stop payment record at tha time, as next plan will be on next year. 
+4. If churn stop the next payment.
+5. If downgrade, end the current plan and then do a downgrade. 
+
+
+Look over the edge case of dates.
+```
+
 # **D. Outside The Box Questions**
 
 The following are open ended questions which might be asked during a technical interview for this case study - there are no right or wrong answers, but answers that make sense from both a technical and a business perspective make an amazing impression!
