@@ -65,3 +65,9 @@ My goal statement: [Link](https://docs.google.com/presentation/d/1yQ5UkV5yzl67kF
 
 # Introduction to user flows.
 
+Shapes that defines various flows. 
+1. Circle -> It defines the action the user takes. 
+2. Square -> It defines the screen the user is at in the flow (aka page)
+3. Diamond -> It defines the decision the user takes. forward or backward.
+4. Arrow -> It defines the user direction. 
+
