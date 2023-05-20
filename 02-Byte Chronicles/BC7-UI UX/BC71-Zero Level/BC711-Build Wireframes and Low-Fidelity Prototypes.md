@@ -60,3 +60,8 @@ Our [product] will let users [perform specific actions] which will affect [descr
 ```ad-example
 Our TradeConference app will let users expand their business which will affect how business owners connect with new clients by giving them the ability to connect with clients at local trade shows. We will measure effectiveness by analyzing show attendance.
 ```
+
+My goal statement: [Link](https://docs.google.com/presentation/d/1yQ5UkV5yzl67kF0xVrvbH3uXO5DO1V3VMV--uQgqnUw/edit#slide=id.g247ec047e9d_0_0)
+
+# Introduction to user flows.
+
