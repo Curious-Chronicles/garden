@@ -74,3 +74,7 @@ Shapes that defines various flows.
 	2. Dot lines -> it indicates the user is moving backward.
 
 ![](https://i.imgur.com/p1y2wRT.png)
+
+# Storyboard
+
+A series of panels or frames that visually describe and explore a user's experience with a product.
