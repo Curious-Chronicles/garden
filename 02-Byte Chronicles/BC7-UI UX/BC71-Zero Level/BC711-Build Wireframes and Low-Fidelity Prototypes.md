@@ -33,3 +33,9 @@ is the series of  experiences a user has as they interact with your product
 ### Problem Statement
 A clear description of the user’s need that should be addressed. The problem statement you created in the last course will guide the focus of your ideation. 
 
+
+# Create goal statements
+
+### Product goal statement
+One or two sentences that describe a product and its benefits for the user.
+
