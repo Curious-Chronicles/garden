@@ -32,10 +32,31 @@ is the series of  experiences a user has as they interact with your product
 
 ### Problem Statement
 A clear description of the user’s need that should be addressed. The problem statement you created in the last course will guide the focus of your ideation. 
+```ad-hint
+[User name] is a/an [user characteristics] who needs [user need] because [insight].
+```
 
+```ad-example
+Sawyer is a construction business owner who needs to attend local trade conferences because they need to network to find more clients. 
+```
 
 # Create goal statements
 
 ### Product goal statement
-One or two sentences that describe a product and its benefits for the user.
+One or two sentences that describe a product and its benefits for the user. Goal statements cover *who* the product will serve, *what* the product will do, and *why* the product solves the user's need. 
 
+
+**To get the answer to**
+
+Who, What and Why, you can either use the problem statement or, 
+
+1. Who -> persona. 
+2. What -> user story. 
+3. Why -> empathy maps and user journey. 
+
+```ad-hint
+Our [product] will let users [perform specific actions] which will affect [describe who the action will affect] by [describe how the action will positively affect them]. We will measure effectiveness by [describe how you will measure the impact].
+```
+```ad-example
+Our TradeConference app will let users expand their business which will affect how business owners connect with new clients by giving them the ability to connect with clients at local trade shows. We will measure effectiveness by analyzing show attendance.
+```
