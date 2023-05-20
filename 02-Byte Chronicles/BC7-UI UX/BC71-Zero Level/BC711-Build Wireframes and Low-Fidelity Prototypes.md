@@ -70,4 +70,7 @@ Shapes that defines various flows.
 2. Square -> It defines the screen the user is at in the flow (aka page)
 3. Diamond -> It defines the decision the user takes. forward or backward.
 4. Arrow -> It defines the user direction. 
+	1. Solid lines -> It indicates the user is moving forward.
+	2. Dot lines -> it indicates the user is moving backward.
 
+![](https://i.imgur.com/p1y2wRT.png)
