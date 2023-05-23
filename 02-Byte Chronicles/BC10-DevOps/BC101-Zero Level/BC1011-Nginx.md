@@ -138,3 +138,31 @@ http{
 events{}
 ```
 
+5. To open up a location within the folder, we can use the `location context` to define another `/{url}` 
+
+```nginx
+http{
+        include mime.types;
+
+        server {
+                listen 80;
+                root /home/sarweshmaharjan/code/work/sarweshmaharjan/nginx-sites;
+
+                location /fruits{
+                        root /home/sarweshmaharjan/code/work/sarweshmaharjan/nginx-sites;
+                }
+        }
+}
+
+events{}
+```
+
+```ad-warning
+Mind you in the above code we didn't define where this /fruits index.html is located at. However, it serves it autoamtically by appending the /fruits at the end of root dir. 
+
+```nginx
+location /fruits{
+    root /home/sarweshmaharjan/code/work/sarweshmaharjan/nginx-sites;
+}
+
+```
