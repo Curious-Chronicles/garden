@@ -175,3 +175,18 @@ location /carbs{
    alias /home/sarweshmaharjan/code/work/sarweshmaharjan/nginx-sites/fruits;
 }
 ```
+
+
+```ad-note
+
+Since by default nginx will search index.html, if that is not present, you need to make sure there are other options accounted for. to do this, use `try files` directives. 
+
+```nginx
+
+ location /veg{
+	root /home/sarweshmaharjan/code/work/sarweshmaharjan/nginx-sites;
+	try_files /veg/veg.html /index.html =404;
+}
+
+```
+.
