@@ -86,5 +86,15 @@ get to the line and press "i"
 
 ## delete everything in the file
 :%d
+
+## Copy a line
+
+yy or y to copy the line
+
+## paste a line
+
+pp 
+or
+shift + p to paste the copied or deleted text before the current line.
 ```
 
