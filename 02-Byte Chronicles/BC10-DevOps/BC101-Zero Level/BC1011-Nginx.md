@@ -84,3 +84,25 @@ nginx -s stop
 
 1. Directives are those with key value pair or in programming term: variable. 
 2. Context: is the wrapper that encapsulates them with, or in programming term: function.
+
+# Coding the Nginx Conf
+
+1. Create a simple HTML, CSS and JS files.
+2. Implement the below code.
+```nginx
+ http{
+        server {
+                listen 80;
+              root /home/sarweshmaharjan/code/work/sarweshmaharjan/nginx-sites;
+       }
+}
+
+ events{}
+```
+
+3. The above code will server the html in that directory to the localhost:80. However, although the CSS and JS will load, it will not work correct. 
+4. Setting the MIME Type. Use the following code.
+
+```nginx
+
+```
