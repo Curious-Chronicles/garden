@@ -78,3 +78,5 @@ Shapes that defines various flows.
 # Storyboard
 
 A series of panels or frames that visually describe and explore a user's experience with a product.
+
+storyboard will help showcase the how and why of the application or product. How the user will feel and what type of environment they will use it.
