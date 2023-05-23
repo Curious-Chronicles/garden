@@ -104,5 +104,17 @@ nginx -s stop
 4. Setting the MIME Type. Use the following code.
 
 ```nginx
+http{
+        types{
+                text/css        css;
+                text/html       html;
+                text/js         js;
+        }
+        server {
+                listen 80;
+                root /home/sarweshmaharjan/code/work/sarweshmaharjan/nginx-sites;
+        }
+}
 
+events{}
 ```
