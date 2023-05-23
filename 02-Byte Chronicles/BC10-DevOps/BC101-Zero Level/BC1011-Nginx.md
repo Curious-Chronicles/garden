@@ -189,4 +189,17 @@ Since by default nginx will search index.html, if that is not present, you need 
 }
 
 ```
-.
+
+
+```ad-note
+If you want to put regular express in the location you can do so by 
+
+```nginx
+location ~* /count/[0-9]{
+	root /home/sarweshmaharjan/code/work/sarweshmaharjan/nginx-sites;
+	try_files /index.html =404;
+}
+```
+
+
+# Redirect and Rewrite
