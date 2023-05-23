@@ -36,6 +36,9 @@ When you open any file using the vim, it dumps you in the command mode, where yo
 3. Set number command
 ```vi
 :set number
+
+## To remove a number
+:set nonu
 ```
 
 4. Insert command

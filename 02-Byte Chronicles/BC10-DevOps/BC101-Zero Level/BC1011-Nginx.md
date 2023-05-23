@@ -118,3 +118,22 @@ http{
 
 events{}
 ```
+
+```ad-tip
+
+Nginx has many of the default mime.types for easiness. That are in mime.types files witin the nginx folder. 
+
+Below is an simple example of using nginx default mime types.
+
+```nginx
+http{
+        include mime.types;
+
+        server {
+                listen 80;
+                root /home/sarweshmaharjan/code/work/sarweshmaharjan/nginx-sites;
+        }
+}
+
+events{}
+```
