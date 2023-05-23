@@ -166,3 +166,12 @@ location /fruits{
 }
 
 ```
+
+```ad-tip
+However, if you don't want to auto append the location {url} at the end of the root then do not use "root" and instead use alias
+
+```nginx
+location /carbs{
+   alias /home/sarweshmaharjan/code/work/sarweshmaharjan/nginx-sites/fruits;
+}
+```
