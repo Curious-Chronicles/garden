@@ -79,3 +79,8 @@ nginx -s quit
 nginx -s stop
 ```
 
+
+### Nginx Terminology
+
+1. Directives are those with key value pair or in programming term: variable. 
+2. Context: is the wrapper that encapsulates them with, or in programming term: function.
