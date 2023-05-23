@@ -9,6 +9,9 @@ Related: {{related}}
 URL: 
 1. [NGINX Explained in 100 Seconds](https://www.youtube.com/watch?v=JKxlsvZXG7c)
 2. [Nginx in 120 Seconds (for beginners)](https://www.youtube.com/watch?v=oZXWVom0n8o)
+3. [Proxy vs Reverse Proxy (Real-world Examples)](https://www.youtube.com/watch?v=4NB0NDtOwIQ)
+4. [The NGINX Crash Course](https://www.youtube.com/watch?v=7VAI73roXaY)
+5. 
 
 ---
 
