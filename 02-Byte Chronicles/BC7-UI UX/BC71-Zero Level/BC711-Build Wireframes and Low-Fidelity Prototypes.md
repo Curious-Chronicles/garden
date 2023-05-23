@@ -79,4 +79,39 @@ Shapes that defines various flows.
 
 A series of panels or frames that visually describe and explore a user's experience with a product.
 
-storyboard will help showcase the how and why of the application or product. How the user will feel and what type of environment they will use it.
+Storyboard will help showcase the how and why of the application or product. How the user will feel and what type of environment they will use it.
+
+Key elements of storyboard are: 
+1. **Character**: users. 
+2. **Scene**: user's environment. 
+3. **Plot**: benefit of using app or product.
+4. **Narrative**: Show situation where user is facing issue. 
+
+Two types of storyboards in UX design are as follows: 
+1. **Big picture storyboards**: they carry the user emotion and the overall environment user faces and how our app or product helps them. 
+2. **Close-up storyboards**: they show the in-app flow of how an user might interact with the app or product
+
+### How do you create a big picture storyboard
+
+1. Start with a problem statement: This will help in character, and scene.
+2. Create a goal statement: This will help in creating plots. 
+3. Set up the storyboard
+4. Add the storyboard scenario
+5. Draw one idea per panel: Add emotion and feels to the story as it process.
+6. Expose pain points for the user along their journey.
+7. Include the user goal or conclusion in the final panel. 
+ ![](https://i.imgur.com/FUOaHjX.png)
+
+
+### How do you create a close picture storyboard
+```ad-note
+Each point is a panel.
+```
+1. User open the phone and clicks on the app. 
+2. The starting of the page 
+3. Logs in, what is shown
+4. Action he wants to do. 
+5. Success of the action. 
+6. Confirmation of the action. 
+
+![](https://i.imgur.com/PnShoew.png)
