@@ -1,6 +1,6 @@
 ---
 index: BC711
-tags: google, ui-ux-certification-course, tutorial, notes
+tags: zero-knowledge,google, ui-ux-certification-course, tutorial, notes
 status: Started
 created: 2023-05-06 14:45
 updated: Saturday 20th May 2023
