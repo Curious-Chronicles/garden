@@ -11,7 +11,7 @@ URL:
 2. [Nginx in 120 Seconds (for beginners)](https://www.youtube.com/watch?v=oZXWVom0n8o)
 3. [Proxy vs Reverse Proxy (Real-world Examples)](https://www.youtube.com/watch?v=4NB0NDtOwIQ)
 4. [The NGINX Crash Course](https://www.youtube.com/watch?v=7VAI73roXaY)
-5. 
+5. [NGINX Linux Server | Common Configurations](https://www.youtube.com/watch?v=MP3Wm9dtHSQ)
 
 ---
 
@@ -223,4 +223,27 @@ To rewrite you can use the following. In rewrite we do not need location. We jus
 ```nginx
 # Whatever is written on (\w+) will be send to $1 
 rewrite ^/number/(\w+) /count/$1
+```
+
+
+# Simple Load Balancer
+
+One of the simplest load balancer algorithm it uses is, round-robin algorithm. An example of this is. 
+
+```nginx
+
+http{
+	upstream backendserver {
+		server 127.0.0.1:1111;
+		server 127.0.0.1:2222;
+		server 127.0.0.1:3333;
+		server 127.0.0.1:4444;
+	}
+	server {
+		listen 80; 
+		location / {
+			proxy_pass http://backendserver/;
+		}
+	}
+}
 ```
