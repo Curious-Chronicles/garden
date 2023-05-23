@@ -203,3 +203,24 @@ location ~* /count/[0-9]{
 
 
 # Redirect and Rewrite
+
+To do a redirect to other location, you can do the following 
+
+```nginx
+ location /carbs{
+	return 307 /fruits;
+}
+```
+
+What it is doing is, redirecting the /carbs to /fruits, 307 is just the HTTP for redirect.
+
+```ad-warning
+However, by doing this you will run into the issue of chaning the {url} which was /carbs to /fruits. If you want to let {url} remain the same then you need to use rewrite.
+```
+
+To rewrite you can use the following. In rewrite we do not need location. We just need to map the new `{new_url}` to `{old_url}`
+
+```nginx
+# Whatever is written on (\w+) will be send to $1 
+rewrite ^/number/(\w+) /count/$1
+```
