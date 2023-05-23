@@ -65,3 +65,12 @@ http {
 	}
 }
 ```
+
+# Getting Started with Nginx
+
+To get nginx to start, all you need to do is type "nginx" in terminal and open browser and type, localhost:8080
+
+```shell
+nginx
+```
+
