@@ -17,6 +17,7 @@ URL:
 
 # What is Nginx?
 
+Nginx is a web server that act as a reverse proxy that stands between the server and client. It gets all the request from the client and balances the load sending to multiple server thereafter. We can also add SSL and firewall in one location instead of adding to multiple server. 
 
 
 
