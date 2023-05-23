@@ -96,5 +96,8 @@ yy or y to copy the line
 pp 
 or
 shift + p to paste the copied or deleted text before the current line.
+
+## Delete word
+dw
 ```
 
