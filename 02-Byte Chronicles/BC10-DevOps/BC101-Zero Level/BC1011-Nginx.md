@@ -12,6 +12,7 @@ URL:
 3. [Proxy vs Reverse Proxy (Real-world Examples)](https://www.youtube.com/watch?v=4NB0NDtOwIQ)
 4. [The NGINX Crash Course](https://www.youtube.com/watch?v=7VAI73roXaY)
 5. [NGINX Linux Server | Common Configurations](https://www.youtube.com/watch?v=MP3Wm9dtHSQ)
+6. [Run a Golang, Nginx, and React App in Docker](https://dev.to/shaggyrec/run-a-golang-nginx-and-react-app-in-docker-59kn)
 
 ---
 
