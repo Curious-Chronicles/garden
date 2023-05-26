@@ -328,7 +328,9 @@ What key metrics would you recommend Foodie-Fi management to track over time to 
 - How long do they use the service for.
 
 What are some key customer journeys or experiences that you would analyze further to improve customer retention?
-- 
+- If a customer want to see something quickly on the phone while being in the bus. 
+- When a customer wants to share in another location. 
+- Custom recommendation list according to the customer interest.
 
 If the Foodie-Fi team were to create an exit survey shown to customers who wish to cancel their subscription, what questions would you include in the survey?
 - Reason for cancellation. This will help know if the food was bad or the service become pricey. 
@@ -337,4 +339,4 @@ If the Foodie-Fi team were to create an exit survey shown to customers who wish 
 - What other apps you use often similar to ours. To identify other competitor. 
 
 What business levers could the Foodie-Fi team use to reduce the customer churn rate? How would you validate the effectiveness of your ideas?
-- 
+- Creating show that showcase other cultural aspect, or creating features that might be useful to them. We can compare the number of user churn before and after according to the new number of show present. 
