@@ -265,27 +265,357 @@ include /etc/nginx/conf.d/*.conf;
 
 ```nginx
 # to replace the deafult nginx.conf file.
+user nginx;
 
+worker_processes auto;
+
+  
+
+error_log /var/log/nginx/error.log notice;
+
+pid /var/run/nginx.pid;
+
+  
+  
+
+events {
+
+worker_connections 1024;
+
+}
+
+  
+  
+
+http {
+
+include /etc/nginx/mime.types;
+
+default_type application/octet-stream;
+
+  
+
+log_format main '$remote_addr - $remote_user [$time_local] "$request" '
+
+'$status $body_bytes_sent "$http_referer" '
+
+'"$http_user_agent" "$http_x_forwarded_for"';
+
+  
+
+access_log /var/log/nginx/access.log main;
+
+  
+
+sendfile on;
+
+#tcp_nopush on;
+
+  
+
+keepalive_timeout 65;
+
+  
+
+#gzip on;
+
+  
+
+# include /etc/nginx/conf.d/*.conf;
+
+  
+
+server {
+
+listen 80;
+
+server_name ec2-3-130-128-23.us-east-2.compute.amazonaws.com;
+
+resolver 8.8.8.8 valid=10s;
+
+  
+
+types {
+
+application/typescript ts;
+
+application/javascript js;
+
+text/html html;
+
+text/css css;
+
+text/scss scss;
+
+image/svg+xml svg;
+
+image/jpeg jpeg jpg;
+
+image/png png;
+
+}
+
+  
+
+location / {
+
+root /usr/share/nginx/html;
+
+index index.html index.htm;
+
+proxy_set_header Host $host;
+
+proxy_set_header X-Real-IP $remote_addr;
+
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+try_files $uri $uri/ /index.html?/$request_uri;
+
+}
+
+}
+
+}
 ```
 
 ```nginx
 # to replace the deafult default.conf file. 
+server {
 
+listen 8080;
+
+server_name ec2-3-130-128-23.us-east-2.compute.amazonaws.com;
+
+resolver 8.8.8.8 valid=10s;
+
+location / {
+
+proxy_pass: http://0.0.0.0:8080/;
+
+proxy_set_header Host $host;
+
+proxy_set_header X-Real-IP $remote_addr;
+
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+}
+
+}
 ```
 
 3. Docker of the react and golang. Below code are for reference purpose. 
 
 ```Dockerfile
 # client side docker file with nginx and react container
+# Use the official Node.js 16 image as the parent image
 
+FROM node:16 AS build
+
+  
+
+# Set the working directory
+
+WORKDIR /usr/src/app
+
+  
+
+# Copy the package files to the working directory
+
+COPY package*.json ./
+
+  
+
+# Install dependencies
+
+RUN yarn install
+
+  
+
+# Copy the rest of the application code to the working directory
+
+COPY . .
+
+  
+
+# Build the application with Vite
+
+RUN yarn build
+
+  
+
+# Use the official Nginx image as the parent image
+
+FROM nginx:latest
+
+  
+
+# Copy the built files from the previous stage to the Nginx web server directory
+
+COPY --from=build /usr/src/app/dist /usr/share/nginx/html
+
+  
+
+# Copy the Nginx configuration file to the container
+
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+
+  
+
+# Expose port 80
+
+EXPOSE 80
+
+  
+
+# Start Nginx in the foreground
+
+CMD ["nginx", "-g", "daemon off;"]
 ```
 
 ```Dockerfile
 # server side docker file with golang 
+# Dockerfile for the Server Side of Leapflow
 
+FROM golang:1.20-alpine3.17
+
+  
+
+RUN addgroup -S leapflow && adduser -S leapflow -G leapflow
+
+  
+
+WORKDIR /server
+
+  
+
+COPY . .
+
+  
+
+RUN go build -o server ./cmd/main.go
+
+  
+
+RUN chown -R leapflow:leapflow /server
+
+  
+
+EXPOSE 8080
+
+  
+
+CMD ["./server"]
 ```
 
 ```yml
 # docker composer setup for all including the postgres server
+version: '3'
 
+  
+
+services:
+
+db:
+
+image: postgres:13-alpine
+
+volumes:
+
+- postgres-data:/var/lib/postgresql/data
+
+env_file:
+
+- db.env
+
+ports:
+
+- "5432:5432"
+
+networks:
+
+- leapflow-network
+
+container_name: leapflow-db
+
+  
+
+server:
+
+build:
+
+context: ./server
+
+dockerfile: Dockerfile
+
+env_file:
+
+- ./server/server.env
+
+restart: always
+
+volumes:
+
+- ./server:/app
+
+ports:
+
+- "8080:8080"
+
+depends_on:
+
+- db
+
+networks:
+
+- leapflow-network
+
+container_name: leapflow-server
+
+  
+
+app:
+
+build:
+
+context: ./app
+
+dockerfile: Dockerfile
+
+env_file:
+
+- ./app/app.env
+
+volumes:
+
+- ./app:/app
+
+ports:
+
+- "80:80"
+
+- "443:443"
+
+depends_on:
+
+- server
+
+restart: always
+
+networks:
+
+- leapflow-network
+
+container_name: leapflow-app
+
+  
+
+volumes:
+
+postgres-data:
+
+networks:
+
+leapflow-network:
 ```
