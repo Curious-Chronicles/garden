@@ -13,6 +13,8 @@ URL:
 4. [The NGINX Crash Course](https://www.youtube.com/watch?v=7VAI73roXaY)
 5. [NGINX Linux Server | Common Configurations](https://www.youtube.com/watch?v=MP3Wm9dtHSQ)
 6. [Run a Golang, Nginx, and React App in Docker](https://dev.to/shaggyrec/run-a-golang-nginx-and-react-app-in-docker-59kn)
+7. [404 Not Found with Docker, React Router and Nginx | by Patrick O'Neill | Medium](https://patrickjamesoneill.medium.com/404-not-found-with-docker-react-router-and-nginx-21fdce02c5)
+8. 
 
 ---
 
@@ -247,4 +249,43 @@ http{
 		}
 	}
 }
+```
+
+
+# Lesson learned
+
+1. By default nginx have there won't conf files that might conflict with yours. One of the simplest of example is when we hit any URL except `/` it will show 404 Not found, even though it was properly conf in yours. 
+```nginx
+include /etc/nginx/conf.d/*.conf;
+# comment this line to 
+# include /etc/nginx/conf.d/*.conf;
+```
+
+2. `proxy_pass` is the directory that cannot be used within the `nginx.conf` file. It needs to be in either the `conf.d/default.conf` or any other .conf file.  A general rule of thumb is, using "nginx" folder containing the `conf.d/default.conf` and `nginx.conf` file and replacing them with the current `nginx.conf` and `default.conf` file present within the container.
+
+```nginx
+# to replace the deafult nginx.conf file.
+
+```
+
+```nginx
+# to replace the deafult default.conf file. 
+
+```
+
+3. Docker of the react and golang. Below code are for reference purpose. 
+
+```Dockerfile
+# client side docker file with nginx and react container
+
+```
+
+```Dockerfile
+# server side docker file with golang 
+
+```
+
+```yml
+# docker composer setup for all including the postgres server
+
 ```
