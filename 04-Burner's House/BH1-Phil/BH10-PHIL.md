@@ -6,12 +6,16 @@ kanban-plugin: basic
 
 ## Phil Work
 
-- [ ] https://phildotus.atlassian.net/browse/FFE-221
 
 
 ## Development
 
 - [ ] https://phildotus.atlassian.net/browse/FFE-192
+
+
+## Review
+
+- [ ] https://phildotus.atlassian.net/browse/FFE-221
 
 
 ## QA Ready
