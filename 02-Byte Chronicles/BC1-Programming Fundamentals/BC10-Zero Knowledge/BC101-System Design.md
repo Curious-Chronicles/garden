@@ -43,3 +43,17 @@ We should also be able to explain the reasoning behind choosing certain flows.
 
 
 # System Design 101
+
+Product Requirement Docs -> Features / abstract concepts -> Data definition -> Objects -> Data base.
+
+So once you know what type of data you need to store, you can then begin to define the types of endpoint required to achieve this goals. 
+
+You also need to know which of the product requirements are important. Also need to think about the various failure point in the system. 
+
+## Extensibility 
+
+It means how easy it is modify the code based on the requirement. 
+
+## Testing
+
+You also need to test the system design, with edge cases and happy paths. 
