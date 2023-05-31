@@ -21,6 +21,7 @@ kanban-plugin: basic
 ## QA Ready
 
 - [ ] https://phildotus.atlassian.net/browse/FFE-215
+- [ ] https://phildotus.atlassian.net/browse/FFE-228
 
 
 ## Dev Testing
