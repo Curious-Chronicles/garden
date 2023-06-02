@@ -5,3 +5,4 @@ Phil is being shown in the scrub and route instead of the recently selected new 
 pending payment approval checkbox is showing. 
 old pp in the suggestion list.
 preview fax error is coming.
+scrub and route pachi process not wroking
