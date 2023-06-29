@@ -5737,7 +5737,7 @@ Reporter
       "insuranceReviewStatus": "InsuranceReviewed",
       "insuranceReviewReason": [],
       "insuranceBenefitType": "",
-      "isNonCaremark": false
+      "isNonCaremark": true
     },
     "insuranceSecondary": {
       "id": "649d29cfe6b46acac06eadd8",
@@ -5768,7 +5768,7 @@ Reporter
       "insuranceReviewStatus": "InsuranceReviewed",
       "insuranceReviewReason": [],
       "insuranceBenefitType": "",
-      "isNonCaremark": false
+      "isNonCaremark": true
     },
     "currentOrder": {
       "id": "649d29cfe6b46acac06eaddd",
@@ -5990,12 +5990,12 @@ Reporter
           "daysOfSupply": 30,
           "paymentOption": "PayThroughInsurance",
           "pharmacyId": "63ab2d68f580b8082821c1e8",
-          "medicationPrice": "100",
-          "primaryReimbursement": "0",
-          "secondaryReimbursement": "150",
-          "insuranceCoverage": "notCovered",
+          "medicationPrice": "10",
+          "primaryReimbursement": "10",
+          "secondaryReimbursement": "10",
+          "insuranceCoverage": "covered",
           "couponCoverage": "applied",
-          "otherCoverageCode": "3",
+          "otherCoverageCode": "8",
           "source": "VPS",
           "isInvalid": false,
           "displayName": ""
