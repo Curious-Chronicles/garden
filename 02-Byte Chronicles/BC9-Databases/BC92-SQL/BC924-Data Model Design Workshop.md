@@ -15,4 +15,9 @@ URL: {{resourc url}}
 
 1. Business requirement should be clear
 2. Higher level draft to include all the listed entity. 
-3. 
+
+Stages:
+1. Conceptual - Business requirement and its entity. 
+2. Logical - Breakdown and add constraints. 
+3. Physical - Develop DB.
+
