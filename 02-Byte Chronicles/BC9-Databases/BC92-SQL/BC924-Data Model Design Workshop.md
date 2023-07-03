@@ -21,3 +21,4 @@ Stages:
 2. Logical - Breakdown and add constraints. 
 3. Physical - Develop DB.
 
+Surrogate and Natural key? 
