@@ -21,4 +21,6 @@ Stages:
 2. Logical - Breakdown and add constraints. 
 3. Physical - Develop DB.
 
-Surrogate and Natural key? 
+Surrogate - Unique identify to auto-generate key. No business meaning 
+Natural key - Business meaning if present, we call them. 
+
