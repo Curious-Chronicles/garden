@@ -10,4 +10,9 @@ URL: {{resourc url}}
 
 ---
 
-# 
+# Introduction
+
+
+1. Business requirement should be clear
+2. Higher level draft to include all the listed entity. 
+3. 
